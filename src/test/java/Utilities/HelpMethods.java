@@ -16,6 +16,7 @@ import static junit.framework.Assert.assertTrue;
 import static junit.framework.TestCase.assertEquals;
 
 public class HelpMethods {
+    //Проверка на то что ключи соответсвуют регулярному выражению
     public static boolean checkKeysMatchPattern(Response response) throws Exception {
         String jsonResponse = response.asString();
         ObjectMapper objectMapper = new ObjectMapper();
@@ -32,7 +33,7 @@ public class HelpMethods {
         }
         return allKeysMatchPattern;
     }
-
+    //Проверка на то что возвращаемое количество номеров не должно быть отрицательным
     public static boolean checkValuesNonNegative(Response response) throws Exception {
         String jsonResponse = response.asString();
         ObjectMapper objectMapper = new ObjectMapper();
